@@ -1,83 +1,41 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
+import './Game/index.js';
+import Clock from './Clock/index.js'  //导出组件 方便使用
+import Toggle from './Toggle/index.js'  //导出组件 方便使用
 
-class Square extends React.Component {
-  constructor(props) {
-    super(props)
-    this.state = {
-      value : null
-    }
-  }
-    render() {
-      return (
-        <button className="square" onClick={() => {alert('122')}}>
-          {this.props.value}
-        </button>
-      );
-    }
-  }
-  
-  class Board extends React.Component {
-    renderSquare(i) {
-      return <Square value={i}/>;
-    }
-  
-    render() {
-      const status = 'Next player: X';
-  
-      return (
-        <div>
-          <div className="status">{status}</div>
-          <div className="board-row">
-            {this.renderSquare(0)}
-            {this.renderSquare(1)}
-            {this.renderSquare(2)}
-          </div>
-          <div className="board-row">
-            {this.renderSquare(3)}
-            {this.renderSquare(4)}
-            {this.renderSquare(5)}
-          </div>
-          <div className="board-row">
-            {this.renderSquare(6)}
-            {this.renderSquare(7)}
-            {this.renderSquare(8)}
-          </div>
-        </div>
-      );
-    }
-  }
-  
-  class Game extends React.Component {
-    render() {
-      return (
-        <div className="game">
-          <div className="game-board">
-            <Board />
-          </div>
-          <div className="game-info">
-            <div>{/* status */}</div>
-            <ol>{/* TODO */}</ol>
-          </div>
-          <div className="test"> 444</div>
-          <Test className="test"/>
-          </div>
-      );
-    }
-  }
+  // function Welcome(props) {
+  //   return <h1> hello,{props.name}</h1>
+  // }
 
-  class Test extends React.Component {
-      render() {
-        return (
-          <div> 112 </div>
-        )
-      }
-  }
-  
+  // function App () {
+  //   return (
+  //     <div><Welcome name="Zhangjie"/>
+  //     <Welcome name="Zhangjie"/>
+  //     </div>
+  //   );
+  // }
+  // const element = <Welcome name="Zhangjie"/>
   // ========================================
+  // const element = (<h1>Hello, world!</h1>)
+  // ReactDOM.render(
+  //   <App/>,
+  //   // element,
+  //   document.getElementById('root')
+  // );
+
+  // function Clock(props) {
+  //   return (
+  //     <div>
+  //       <h1>Hello, world!</h1>
+  //       <h2>It is {props.date.toLocaleTimeString()}.</h2>
+  //     </div>
+  //   );
+  // }
+  
   
   ReactDOM.render(
-    <Game />,
+    <Toggle />,
     document.getElementById('root')
   );
+  
