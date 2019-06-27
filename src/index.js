@@ -3,6 +3,8 @@ import ReactDOM from 'react-dom';
 import './Game/index.js';
 import Clock from './Clock/index.js'  //导出组件 方便使用
 import Toggle from './Toggle/index.js'  //导出组件 方便使用
+import EssayForm from './Form/index.js';
+import MZList from './List/index.js';
 
   // function Welcome(props) {
   //   return <h1> hello,{props.name}</h1>
@@ -35,7 +37,7 @@ import Toggle from './Toggle/index.js'  //导出组件 方便使用
   
   
   ReactDOM.render(
-    <Toggle />,
+    <MZList />,
     document.getElementById('root')
   );
   

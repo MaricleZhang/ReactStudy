@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 class Toggle extends React.Component {
     constructor(props) {
@@ -6,10 +7,11 @@ class Toggle extends React.Component {
         this.state = {
             isToggle : true
         }
-        this.handleClick = this.handleClick.bind(this)
+        // this.handleClick = this.handleClick.bind(this)
     }
 
     handleClick() {
+        console.log(this.props.name)
         this.setState(state => ({
             isToggle: !state.isToggle
         }))
