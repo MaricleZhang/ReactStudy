@@ -15,25 +15,20 @@ class MZList extends React.Component {
     componentDidMount () {
         this.setState({
             list:[
-                {'amount':'33','name':'中原消费-提钱花'},
+                {'amount':'33','name':'中原消费-提钱花','icon':'../../assets/img/fast_hui.png'},
                 {'amount':'33','name':'中原消费-提钱花'}
             ]
         })
     }
     render() {
-        const style={
-            color:'pink',
-            fontSize:'30px',
-            border:'1px #666 solid',
-        };
       return (
-      <div style={style}>
-      111
+      <div className={Styles.content}>
           {/* <ul> */}
           {
           this.state.list.map((item, index) => {
             return (
                 <div className={Styles.item}>
+                <img src={require('../assets/img/fast_hui.png')} alt="1111"/>
                 {item.name}
                 {/* <img />
                   <p className={Styles.leftTop}>
